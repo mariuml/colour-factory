@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Colorful from "@uiw/react-color-colorful";
+export let hexCode = "#59c09a";
 
 function ColorPicker() {
   const [hex, setHex] = useState("#59c09a");
-
+    hexCode = hex;
   return (
     <div
       style={{
