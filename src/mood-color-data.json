@@ -1,26 +1,34 @@
 [
     {
         "mood": "Strong",
-        "colour": "#AB3337"
+        "color": "#AB3337"
     },
     {
         "mood": "Loved",
-        "colour": ""
+        "color": "#E06a78"
     },
     {
         "mood": "Confident",
-        "colour": ""
+        "color": "FC8438"
     },
     {
         "mood": "Brave",
-        "colour": ""
+        "color": "FF631C"
     },
     {
-        "mood": "Excited",
-        "colour": ""
+        "mood": "Happy",
+        "color": "#FFD528"
     },
     {
-        "mood": "Excited",
-        "colour": ""
+        "mood": "Warm",
+        "color": "#FFE3B2"
+    },
+    {
+        "mood": "Fresh",
+        "color": "C8E17B"
+    },
+    {
+        "mood": "Trusting",
+        "color": "3F7570"
     }
 ]
