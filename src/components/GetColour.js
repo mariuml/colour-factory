@@ -19,15 +19,7 @@ function GetColour() {
     method: "GET",
   }).then(function (response) {
     console.log(response);
-
-    // Saving the named palette image to myPalette variable
-    // var myPaletteUrl = response.image.named;
-    // var paletteDisplay = $("<img id='palette-display'>");
-    // paletteDisplay.attr("src", myPaletteUrl);
-
-
-
-    $( "#paletteDisplay" ).attr( "src", response.image.named);
+    $("#paletteDisplay").attr("src", response.image.named);
   });
 
   return (
