@@ -5,22 +5,30 @@
     },
     {
         "mood": "Loved",
-        "colour": ""
+        "colour": "#E06a78"
     },
     {
         "mood": "Confident",
-        "colour": ""
+        "colour": "FC8438"
     },
     {
         "mood": "Brave",
-        "colour": ""
+        "colour": "FF631C"
     },
     {
-        "mood": "Excited",
-        "colour": ""
+        "mood": "Happy",
+        "colour": "#FFD528"
     },
     {
-        "mood": "Excited",
-        "colour": ""
+        "mood": "Warm",
+        "colour": "#FFE3B2"
+    },
+    {
+        "mood": "Fresh",
+        "colour": "C8E17B"
+    },
+    {
+        "mood": "Trusting",
+        "colour": "3F7570"
     }
 ]
