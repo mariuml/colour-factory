@@ -1,17 +1,11 @@
 import React from "react";
 import Button from "@mui/material/Button";
 
-function MoodButton() {
+function MoodButton(props) {
   return (
     <div className="moodButton">
       {" "}
-      <Button variant="contained">Contained</Button>
-      <Button variant="contained" disabled>
-        Disabled
-      </Button>
-      <Button variant="contained" href="#contained-buttons">
-        Link
-      </Button>
+      <Button variant="contained" style={{backgroundColor:props.color, borderRadius:12}}>{props.name}</Button>
     </div>
   );
 }
