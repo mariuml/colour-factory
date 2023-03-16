@@ -6,6 +6,8 @@ import SecondPage from "./components/SecondPage/SecondPage";
 import ResultPage from "./components/ResultPage/ResultPage";
 
 import Header from "./components/Header/Header";
+import ColorPicker from "./components/ColorPicker/ColorPicker";
+import GetColour from "./components/GetColour";
 
 function App() {
   return (
@@ -19,6 +21,9 @@ function App() {
 
         </Routes>
       </Router>
+      <h1> The Colour Factory </h1>
+      <ColorPicker />
+      <GetColour />
     </div>
   );
 }
