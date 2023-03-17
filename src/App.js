@@ -14,13 +14,12 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="ColorSelectionPage" element={<ColorSelectionPage />} />
-          <Route path="ColorSelectionPage/ResultPage" element={<ResultPage />} />
+          <Route
+            path="ColorSelectionPage/ResultPage"
+            element={<ResultPage />}
+          />
         </Routes>
       </BrowserRouter>
-
-      {moods.map((m) => {
-        return <MoodButton name={m.name} color={m.color} />;
-      })}
     </div>
   );
 }
