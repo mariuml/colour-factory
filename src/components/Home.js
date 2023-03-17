@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from 'react-router-dom';
 import $ from "jquery"
+import Button from "@mui/material/Button"
 
 export let numberOfColors = 0;
 
@@ -31,7 +32,7 @@ export default function FirstPage() {
         <input id="colorNum"className="d-flex m-auto"></input>
       </div>
 
-      <button className="btn btn-secondary" onClick={checkInput}>Next</button>
+      <Button className="btn" variant="text" onClick={checkInput}>Next</Button>
     </div>
   )
 };

@@ -4,11 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import ColorSelectionPage from "./components/ColorSelectionPage";
 import ResultPage from "./components/ResultPage";
-
 import Header from "./components/Header";
-
-import MoodButton from "./components/Buttons/MoodButtons";
-import moods from "./mood-color-data.json";
 
 function App() {
   return (
@@ -18,13 +14,12 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="ColorSelectionPage" element={<ColorSelectionPage />} />
-          <Route path="ColorSelectionPage/ResultPage" element={<ResultPage />} />
+          <Route
+            path="ColorSelectionPage/ResultPage"
+            element={<ResultPage />}
+          />
         </Routes>
       </BrowserRouter>
-
-      {moods.map((m) => {
-        return <MoodButton name={m.name} color={m.color} />;
-      })}
     </div>
   );
 }
