@@ -4,11 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import ColorSelectionPage from "./components/ColorSelectionPage";
 import ResultPage from "./components/ResultPage";
-
 import Header from "./components/Header";
-
-import MoodButton from "./components/Buttons/MoodButtons";
-import moods from "./mood-color-data.json";
 
 function App() {
   return (
