@@ -29,7 +29,7 @@ function App() {
       
       {moods.map((m) => {
   return (
-    <MoodButton name={m.name} color={m.color}/>
+    <MoodButton name={m.mood} color={m.color}/>
   )
 })}
 
