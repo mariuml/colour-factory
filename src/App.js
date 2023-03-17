@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import ColorSelectionPage from "./components/ColorSelectionPage";
 import ResultPage from "./components/ResultPage";
@@ -10,13 +10,17 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Router>
+      <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="SecondPage" element={<ColorSelectionPage />} />
-          <Route path="SecondPage/ResultPage" element={<ResultPage />} />
+          <Route path="ColorSelectionPage" element={<ColorSelectionPage />} />
+          <Route path="ColorSelectionPage/ResultPage" element={<ResultPage />} />
         </Routes>
-      </Router>
+      </BrowserRouter>
+
+      {moods.map((m) => {
+        return <MoodButton name={m.name} color={m.color} />;
+      })}
     </div>
   );
 }
