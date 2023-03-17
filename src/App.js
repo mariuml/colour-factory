@@ -21,13 +21,6 @@ function App() {
           <Route path="SecondPage/ResultPage" element={<ResultPage />} />
         </Routes>
       </Router>
-
-      {moods.map((m) => {
-  return (
-    <MoodButton name={m.mood} color={m.color}/>
-  )
-})}
-
     </div>
   );
 }
