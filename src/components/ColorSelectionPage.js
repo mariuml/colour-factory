@@ -5,6 +5,7 @@ import ColorPicker from "./ColorPicker";
 
 
 export default function SecondPage() {
+    
     return (
         <div className="container-fluid row">
             <div className="col-6">
