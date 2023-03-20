@@ -5,15 +5,15 @@
     },
     {
         "mood": "Loved",
-        "color": "#E06a78"
+        "color": "#E71837"
     },
     {
         "mood": "Confident",
-        "color": "FC8438"
+        "color": "#FC8438"
     },
     {
         "mood": "Brave",
-        "color": "FF631C"
+        "color": "#FF631C"
     },
     {
         "mood": "Happy",
@@ -25,10 +25,58 @@
     },
     {
         "mood": "Fresh",
-        "color": "C8E17B"
+        "color": "#C8E17B"
     },
     {
         "mood": "Trusting",
-        "color": "3F7570"
+        "color": "#3F7570"
+    },
+    {
+        "mood": "Loyal",
+        "color": "#175875"
+    },
+    {
+        "mood": "Peaceful",
+        "color": "#CAEDEC"
+    },
+    {
+        "mood": "Compassion",
+        "color": "#E06a78"
+    },
+    {
+        "mood": "Sweet",
+        "color": "#F8DEE6"
+    },
+    {
+        "mood": "Ambitious",
+        "color": "#5A005A"
+    },
+    {
+        "mood": "Luxurious",
+        "color": "#C0BCCE"
+    },
+    {
+        "mood": "Dependable",
+        "color": "#663300"
+    },
+    {
+        "mood": "Simple",
+        "color": "#CCA978"
+    },
+    {
+        "mood": "Secure",
+        "color": "#06060B"
+    },
+    {
+        "mood": "Sophisticated",
+        "color": "#3E484A"
+    },
+    {
+        "mood": "Calm",
+        "color": "#F0F0EF"
+    },
+    {
+        "mood": "Innocent",
+        "color": "#FFFFFF"
     }
 ]
