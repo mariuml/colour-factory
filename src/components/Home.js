@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from 'react-router-dom';
 import $ from "jquery"
 import Button from "@mui/material/Button"
+import ErrorAlert from "./ErrorAlert";
 
 export let numberOfColors = 0;
 
@@ -14,7 +15,8 @@ export default function FirstPage() {
 
     // Chhecks if input value is a valid number
     if (isNaN(colorNum) || colorNum > 9 || colorNum < 0 || colorNum === '') {
-      alert("Please input valid number! or something like that")
+      // alert("Please input valid number! or something like that")
+      <ErrorAlert message="Some message" />
       return navigate('/')
     } else {
     // Saves user input and exports it.
