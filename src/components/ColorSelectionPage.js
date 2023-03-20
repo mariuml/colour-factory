@@ -12,7 +12,7 @@ export default function SecondPage() {
         <h3>Select a mood:</h3>
         <div className="moodButtonContainer">
           {moods.map((m) => {
-            return <MoodButton name={m.mood} color={m.color} />;
+            return <MoodButton mood={m.mood} color={m.color} />;
           })}
         </div>
       </div>

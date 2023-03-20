@@ -20,7 +20,7 @@ function MoodButton(props) {
           padding: 1,
         }}
       >
-        {props.name}
+        {props.mood}
       </Button>
     </div>
   );
