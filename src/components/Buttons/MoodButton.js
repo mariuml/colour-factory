@@ -16,6 +16,8 @@ function MoodButton(props) {
           background: props.color,
           color: textColor,
           borderRadius: 12,
+          margin: 1,
+          padding: 1,
         }}
       >
         {props.name}

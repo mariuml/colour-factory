@@ -10,9 +10,11 @@ export default function SecondPage() {
     <div className="container-fluid row">
       <div className="col-6">
         <h3>Select a mood:</h3>
-        {moods.map((m) => {
-          return <MoodButton name={m.mood} color={m.color} />;
-        })}
+        <div className="moodButtonContainer">
+          {moods.map((m) => {
+            return <MoodButton name={m.mood} color={m.color} />;
+          })}
+        </div>
       </div>
       <div className="col-6">
         <h1 className="text-center"> The Colour Factory </h1>
