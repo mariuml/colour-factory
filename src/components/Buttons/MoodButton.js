@@ -6,10 +6,12 @@ function MoodButton(props) {
   if (props.color[1] === "F") {
     textColor = "#000000";
   }
+
   return (
-    <div className="moodButton">
+    <div className="moodButton col-5">
       {" "}
       <Button
+        key={props.mood}
         variant="contained"
         sx={{
           width: 145,
