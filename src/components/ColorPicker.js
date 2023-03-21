@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import Colorful from "@uiw/react-color-colorful";
 import Wheel from '@uiw/react-color-wheel';
+
 import $ from 'jquery'
 
 
-
+// needs to be removed
 export let hexCode = "#59c09a";
 
 export let userColor = "";
@@ -18,14 +18,13 @@ function ColorPicker() {
     const brightness = $("#brightness").val()
     const newValue = hsva
     newValue.v = Number(brightness)
-    console.log(newValue)
     setHsva({...hsva, newValue})
   }
   
-
   let color = "hsl(" + hsva.h + ", " + hsva.s + "%, " + hsva.v +"%)"
-  
-  console.log(hsva)
+
+  userColor = color;
+
   return (
     <div>
       <Wheel
@@ -44,24 +43,6 @@ function ColorPicker() {
       </div>
     </div>
   );
-
-  // <div
-  //   style={{
-  //     width: "500px",
-  //     margin: "auto",
-  //     border: "3px solid black",
-  //     background: hex,
-  //   }}
-  // >
-  //   <Colorful
-  //     style={{ margin: "auto" }}
-  //     color={hex}
-  //     onChange={(color) => {
-  //       setHex(color.hexa);
-  //     }}
-  //   />
-  //   <div style={{ marginTop: 30, padding: 10 }}>{hex}</div>
-  // </div>
 }
 
 export default ColorPicker;

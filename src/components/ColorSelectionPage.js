@@ -6,21 +6,16 @@ import moods from "../mood-color-data.json";
 import NextButton from "./Buttons/NextButton";
 
 
-
-
-
 export default function SecondPage() {
   
-
-
 // Rendering buttons to the page
   return (
     <div className="container-fluid row">
       <div className="col-6">
         <h3>Select a mood:</h3>
-        <div className="moodButtonContainer">
+        <div className="moodButtonContainer row">
           {moods.map((m) => {
-            return <MoodButton mood={m.mood} color={m.color} 
+            return <MoodButton key={m.mood} mood={m.mood} color={m.color} 
          />;
           })}
         </div>
