@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import {Button, Tooltip} from "@mui/material/";
 
 function MoodButton(props) {
   let textColor = "#FFFFFF";
@@ -10,6 +10,7 @@ function MoodButton(props) {
   return (
     <div className="moodButton col-5">
       {" "}
+      <Tooltip title={props.color} placement='right-end'>
       <Button
         key={props.mood}
         variant="contained"
@@ -24,6 +25,7 @@ function MoodButton(props) {
       >
         {props.mood}
       </Button>
+      </Tooltip>
     </div>
   );
 }
