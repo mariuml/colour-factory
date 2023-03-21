@@ -1,14 +1,17 @@
 import $ from "jquery";
+import { colourSelection } from "./Buttons/MoodButton";
+
+// Global variables
+
+
+var mode = "analogic";
+var numberOfColours = "5";
 
 // Function to get an API response from the Colours API
 function GetColour() {
-  var hexCode = "FF0000";
-  var mode = "analogic";
-  var numberOfColours = "5";
-
   var queryURL =
     "https://www.thecolorapi.com/scheme?hex=" +
-    hexCode +
+   colourSelection +
     "&mode=" +
     mode +
     "&count=" +
