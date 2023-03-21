@@ -20,7 +20,7 @@ const setColour = event => {
   }
 
   return (
-    <div className="moodButton col-5">
+    <div className="moodButton col-6">
       {" "}
       <Tooltip title={props.color} placement='right-start'>
       <Button
