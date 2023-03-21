@@ -4,7 +4,7 @@ import $ from "jquery";
 import Button from "@mui/material/Button";
 import ErrorAlert from "./ErrorAlert";
 
-export let numberOfColors = 0;
+export let numberOfColors;
 
 export default function FirstPage() {
   const navigate = useNavigate();
@@ -45,8 +45,13 @@ export default function FirstPage() {
           <ErrorAlert message="Looks like you forgot to specify the number of colours for your palette." />
         )}
       </div>
-
-      <Button className="btn" variant="text" onClick={checkInput}>
+      <Button
+        variant="text"
+        className="m-3"
+        sx={{ color: "rgb(89, 192, 154)" }}
+        size="large"
+        onClick={checkInput}
+      >
         Next
       </Button>
     </div>
