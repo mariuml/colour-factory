@@ -1,11 +1,12 @@
 import $ from "jquery";
 import { colourSelection } from "./Buttons/MoodButton";
+import { numberOfColors } from "./Home";
 
 // Global variables
 
 
-var mode = "analogic";
-var numberOfColours = "5";
+let mode = "analogic";
+
 
 // Function to get an API response from the Colours API
 function GetColour() {
@@ -15,7 +16,7 @@ function GetColour() {
     "&mode=" +
     mode +
     "&count=" +
-    numberOfColours;
+    numberOfColors;
 
   $.ajax({
     url: queryURL,
