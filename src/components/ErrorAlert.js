@@ -1,34 +1,17 @@
 import React from "react";
+import { Alert, AlertTitle } from "@mui/material/";
 
 function ErrorAlert(props) {
   return (
-    <div
-      class="modal fade"
-      id="exampleModal"
-      tabindex="-1"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
+    <Alert
+      severity="error"
+      style={{ width: "65%" }}
+      className="m-auto mt-5 mb-5"
     >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">
-              Missing Information
-            </h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <p>{props.message}</p>
-          </div>
-        </div>
-      </div>
-    </div>
+      <AlertTitle>Error</AlertTitle>
+      {props.message}
+    </Alert>
   );
 }
 
-export default ErrorAlert
+export default ErrorAlert;
