@@ -1,9 +1,7 @@
 import $ from "jquery";
-import { colourSelection } from "./Buttons/MoodButton";
+import { colourSelection } from "../Buttons/MoodButton";
 
 // Global variables
-
-
 var mode = "analogic";
 var numberOfColours = "5";
 
