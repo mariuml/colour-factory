@@ -9,7 +9,7 @@ export default function Header () {
             height: 150,
             backgroundColor: hexCode
         }}>
-            <h1>Welcome to colour factory!</h1>
+            <h1>Welcome to Colour Factory!</h1>
             <button className="btn btn-primary">My saved palettes</button>
         </header>
     )
