@@ -15,7 +15,7 @@ function MoodButton(props) {
         variant="contained"
         sx={{
           width: 145,
-          background: props.color,
+          backgroundColor: props.color,
           color: textColor,
           borderRadius: 12,
           margin: 1,
