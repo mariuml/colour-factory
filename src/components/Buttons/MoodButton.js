@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import {Button, Tooltip} from "@mui/material/";
 // import { startingColour } from "./GetColour";
 export let colourSelection = "";
 
@@ -22,7 +22,7 @@ const setColour = event => {
   return (
     <div className="moodButton col-5">
       {" "}
-      <Tooltip title={props.color} placement='right-end'>
+      <Tooltip title={props.color} placement='right-start'>
       <Button
         key={props.mood}
         variant="contained"
