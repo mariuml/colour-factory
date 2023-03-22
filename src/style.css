@@ -54,6 +54,7 @@
 	}
 };
 
+
 /* Background */
 
 html {
@@ -105,4 +106,12 @@ html {
 	100% {
 	  transform:translateX(25%);
 	}
+  }
+
+  /* Active mood button */
+
+  .active {
+	border: 1px solid black !important;
+	box-shadow: 0 0 30px 15px #59c09a !important;
+	z-index: 1;
   }

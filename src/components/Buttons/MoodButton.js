@@ -6,9 +6,19 @@ export let colourSelection = "";
 function MoodButton(props) {
   // Event handler
 
-  const setColour = () => {
+  const setColour = event => {
     colourSelection = props.color.substring(1);
+
+    const variable = document.querySelectorAll(".mood-btn");
+    variable.forEach(e => e.classList.remove('active'))
+
+    const target = event.target
+    target.classList.add("active")
   };
+
+  const check = event => {
+
+  }
 
   // Returning mood buttons
   let textColor = "#FFFFFF";
@@ -24,6 +34,7 @@ function MoodButton(props) {
           key={props.mood}
           variant="contained"
           onClick={setColour}
+          className="mood-btn"
           sx={{
             width: 145,
             backgroundColor: props.color,
