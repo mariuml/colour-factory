@@ -23,7 +23,7 @@ export default function SecondPage() {
       </div>
 
       <NavLink to="./ResultPage">
-        <Button className="nextButton m-auto px-5">Next&#187;</Button>
+        <Button className="nextButton m-auto p-5">Next&#187;</Button>
       </NavLink>
     </div>
   );

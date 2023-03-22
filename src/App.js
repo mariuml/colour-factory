@@ -14,17 +14,22 @@ import './style.css';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="ColorSelectionPage" element={<ColorSelectionPage />} />
-          <Route
-            path="ResultPage"
-            element={<ResultPage />}
-          />
-        </Routes>
-      </BrowserRouter>
+      <div className="bg"></div>
+      <div className="bg bg2"></div>
+      <div className="bg bg3"></div>
+      <div className="content">
+        <Header />
+        <BrowserRouter>
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="ColorSelectionPage" element={<ColorSelectionPage />} />
+            <Route
+              path="ResultPage"
+              element={<ResultPage />}
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </div>
   );
 }
