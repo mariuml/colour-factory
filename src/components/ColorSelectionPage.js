@@ -34,7 +34,7 @@ function toResult() {
         <ColorPicker />
       </div>
 
-      <div className="d-flex pt-4">
+      <div className="d-flex p-4">
         <Button
           variant="text"
           className="button m-auto px-5"
