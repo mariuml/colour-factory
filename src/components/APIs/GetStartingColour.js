@@ -23,7 +23,7 @@ function GetStartingColour() {
   return (
     <div>
       <h1> Here is your chosen starting colour</h1>
-      <img src="" id="startingColourDisplay"></img>
+      <img alt="starting colour display" src="" id="startingColourDisplay"></img>
     </div>
   )
 }
