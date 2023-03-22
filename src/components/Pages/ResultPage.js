@@ -8,7 +8,7 @@ import { userColor } from "../ColorPicker"
 
 export default function ResultPage() {
   return (
-    <div>
+    <div className="font">
       <h1>Results</h1>
       <h2>{userColor}</h2>
       {/* Starting colour GET request displayed below */}
