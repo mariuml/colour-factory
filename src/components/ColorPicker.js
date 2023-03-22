@@ -9,7 +9,7 @@ import '../style.css'
 // needs to be removed
 export let hexCode = "#59c09a";
 
-export let userColor = "";
+export let userColour;
 
 function ColorPicker() {
 
@@ -23,12 +23,18 @@ function ColorPicker() {
   }
   
   const color = "hsl(" + hsva.h + ", " + hsva.s + "%, " + hsva.v +"%)"
-  userColor = [];
-  userColor.push(hsva.h, hsva.s, hsva.v)
+  userColour = [];
+  userColour.push(hsva.h, hsva.s, hsva.v)
+
+  function selected() {
+    const variable = document.querySelectorAll(".mood-btn");
+    variable.forEach(e => e.classList.remove('active'))
+  }
 
   return (
     <div>
       <Wheel
+        onClick={selected}
         className="m-auto"
         width={400}
         height={400}
