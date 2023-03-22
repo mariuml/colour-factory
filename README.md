@@ -2,15 +2,17 @@
 
 ## Description
 
+This app allows users to generate a colour palette with up to nine colours. It is intended to provide guidance or inspiration to developers especially who may be struggling with designing a colour palette for their project.
+
 [View the deployed page](https://thecolourfactory.netlify.app)
 
 ## Usage
 
 ### How-to
 
-1.
-2.
-3.
+1. Select the number of colours you would like in the palette. You can choose up to nine. Click Next.
+2. Select a colour from the mood buttons or the colour picker. Click Next.
+3. Results are rendered and you have an option to save the palette.
 
 ### Demo
 
@@ -24,14 +26,15 @@
 - [Leanne Knight](https://github.com/YaszMoon)
 - [Marius Kubilius](https://github.com/MarKubil)
 
-### APIS
+### Libraries/Packages/Technology
 
 - [The Color API](https://www.thecolorapi.com)
-- [Moment](https://momentjs.com/docs/)
+- [Material UI](https://mui.com/)
+- [Bootstrap](https://getbootstrap.com)
+- [React Bootstrap](https://react-bootstrap.github.io)
 
 ## Licence
 
-Please refer to the licence file.
-*Add licence info. File needed.*
+[MIT License](./LICENSE)
 
 ## Future Feature Development
