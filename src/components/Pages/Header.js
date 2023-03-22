@@ -9,6 +9,8 @@ export default function Header() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+//   const navigate = useNavigate()
+
   return (
     <header
       className="container-fluid d-flex align-items-center justify-content-between"
@@ -19,9 +21,9 @@ export default function Header() {
       }}
     >
       <h1>Welcome to Colour Factory!</h1>
-      <button onClick={handleShow} className="btn btn-primary">
-        My saved palettes
-      </button>
+<Button href="/" variant="contained">Home</Button>
+      <Button onClick={handleShow} variant="contained">Saved Palettes
+      </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title className="m-auto">
