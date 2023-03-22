@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 export default function SecondPage() {
   // Rendering buttons to the page
   return (
-    <div className="container-fluid row">
+    <div className="container-fluid row font">
       <div className="col-6">
         <h2>Select a Mood:</h2>
         <ul className="moodButtonContainer row">

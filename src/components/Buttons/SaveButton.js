@@ -5,7 +5,7 @@ function SaveButton() {
   return (
     <Button
       variant="outlined"
-      className="m-3"
+      className="m-3 font"
       sx={{ color: "rgb(89, 192, 154)", borderColor: "rgb(89, 192, 154)" }}
     >
       Save Palette

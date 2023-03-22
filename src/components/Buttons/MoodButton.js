@@ -17,7 +17,11 @@ function MoodButton(props) {
   }
 
   return (
+
+    <div className="moodButton col-6 font">
+
     <li className="moodButton col-6" style={{listStyle:"none"}}>
+
       {" "}
       <Tooltip title={props.color} placement="right-start">
         <Button

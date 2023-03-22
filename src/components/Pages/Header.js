@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <header
-      className="container-fluid d-flex align-items-center justify-content-between"
+      className="container-fluid d-flex align-items-center justify-content-between font"
       style={{
         width: "100%",
         height: 150,
@@ -19,7 +19,8 @@ export default function Header() {
       }}
     >
       <h1>Welcome to Colour Factory!</h1>
-      <button onClick={handleShow} className="btn btn-primary">
+      <button onClick={handleShow} className="btn btn-primary"
+      >
         My saved palettes
       </button>
       <Modal show={show} onHide={handleClose}>
