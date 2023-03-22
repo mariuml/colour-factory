@@ -1,12 +1,43 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ColorPicker from "../ColorPicker";
 import MoodButton from "../Buttons/MoodButton";
 import moods from "../../mood-color-data.json";
 import Button from "@mui/material/Button";
 
+// Importing color picker and mood button value;
+import { colourSelection } from '../Buttons/MoodButton'
+import { userColour } from '../ColorPicker'
+
+
+export let userChosenColour;
+
+
 export default function SecondPage() {
   // Rendering buttons to the page
+  const navigate = useNavigate();
+
+  function checkResult() {
+
+    let isItMoodButton = false
+    const variable = document.querySelectorAll(".mood-btn");
+  
+    variable.forEach(e => {
+      if (e.classList.contains('active')) {
+        isItMoodButton = true;
+      };
+
+      if (isItMoodButton) {
+        userChosenColour = "hex=" + colourSelection;
+      } else {
+        userChosenColour = "hsl=" + userColour[0] + "," + userColour[1] + "%," + userColour[2] + "%"
+      };
+    });
+
+
+    return navigate("/ResultPage");
+  }
+
   return (
     <div className="container-fluid row">
       <div className="col-6">
@@ -26,15 +57,14 @@ export default function SecondPage() {
         <p>Selected Colour:</p>
       </div>
 
-      <NavLink to="/ResultPage">
       <div className="d-flex p-4">
-        <Button 
-        className="nextButton m-auto px-5"
+        <Button
+          onClick={checkResult}
+          className="nextButton m-auto px-5"
         >
           Next&#187;
         </Button>
       </div>
-      </NavLink>
     </div>
   );
 }
