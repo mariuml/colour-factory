@@ -22,7 +22,7 @@ export default function SecondPage() {
         <ColorPicker />
       </div>
 
-      <NavLink to="./ResultPage">
+      <NavLink to="/ResultPage">
         <Button className="nextButton m-auto p-5">Next&#187;</Button>
       </NavLink>
     </div>
