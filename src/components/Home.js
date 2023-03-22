@@ -4,6 +4,7 @@ import $ from "jquery";
 import Button from "@mui/material/Button";
 import ErrorAlert from "./ErrorAlert";
 
+
 export let numberOfColors;
 
 export default function FirstPage() {
@@ -45,15 +46,15 @@ export default function FirstPage() {
           <ErrorAlert message="Looks like you forgot to specify the number of colours for your palette." />
         )}
       </div>
-      <Button
-        variant="text"
-        className="m-3"
-        sx={{ color: "rgb(89, 192, 154)" }}
-        size="large"
-        onClick={checkInput}
-      >
-        Next
-      </Button>
+      <div className="d-flex pt-4">
+        <Button
+          variant="text"
+          className="button m-auto px-5"
+          onClick={checkInput}
+        >
+          Next&#187;
+        </Button>
+      </div>
     </div>
   );
 }
