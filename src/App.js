@@ -1,10 +1,15 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+// Components
+import Header from "./components/Pages/Header";
 import Home from "./components/Pages/Home";
 import ColorSelectionPage from "./components/Pages/ColorSelectionPage";
 import ResultPage from "./components/Pages/ResultPage";
-import Header from "./components/Pages/Header"
+
+// CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+import './style.css';
 
 function App() {
   return (
@@ -15,7 +20,7 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="ColorSelectionPage" element={<ColorSelectionPage />} />
           <Route
-            path="ColorSelectionPage/ResultPage"
+            path="ResultPage"
             element={<ResultPage />}
           />
         </Routes>
