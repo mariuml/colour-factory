@@ -7,7 +7,7 @@ function MoodButton(props) {
 
 // Event handler
 
-const setColour = event => {
+const setColour = () => {
    colourSelection = (props.color).substring(1);
  }
 
