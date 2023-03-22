@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
 import { hexCode } from "../ColorPicker";
 import { Modal } from "react-bootstrap";
 import Button from "@mui/material/Button";
@@ -23,9 +22,8 @@ export default function Header() {
     >
       <h1>Welcome to Colour Factory!</h1>
 <Button href="/" variant="contained">Home</Button>
-      <button onClick={handleShow} className="btn btn-primary">
-        My Saved Palettes
-      </button>
+      <Button onClick={handleShow} variant="contained">Saved Palettes
+      </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title className="m-auto">
