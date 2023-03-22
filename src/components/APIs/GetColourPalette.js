@@ -30,7 +30,7 @@ function GetColour() {
   return (
     <div>
       <h1> Here is your colour palette!</h1>
-      <img src="" id="paletteDisplay"></img>
+      <img alt="pallete display" src="" id="paletteDisplay"></img>
     </div>
   );
 }
