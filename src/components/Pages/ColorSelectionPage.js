@@ -11,15 +11,19 @@ export default function SecondPage() {
     <div className="container-fluid row font">
       <div className="col-6">
         <h2>Select a Mood:</h2>
-        <div className="moodButtonContainer row">
+        <ul className="moodButtonContainer row">
           {moods.map((m) => {
             return <MoodButton key={m.mood} mood={m.mood} color={m.color} />;
           })}
-        </div>
+        </ul>
       </div>
       <div className="col-6">
         <h2 className="text-center"> Colour Picker </h2>
         <ColorPicker />
+      </div>
+
+      <div>
+        <p>Selected Colour:</p>
       </div>
 
       <NavLink to="/ResultPage">
