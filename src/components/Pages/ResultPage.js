@@ -1,9 +1,9 @@
 import React from "react";
-import GetColour from "./APIs/GetColourPalette";
-import SaveButton from "./Buttons/SaveButton";
-import GetStartingColour from "./APIs/GetStartingColour";
+import GetColour from "../APIs/GetColourPalette";
+import SaveButton from "../Buttons/SaveButton";
+import GetStartingColour from "../APIs/GetStartingColour";
 
-import { userColor } from "./ColorPicker"
+import { userColor } from "../ColorPicker"
 
 
 export default function ResultPage() {

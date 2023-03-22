@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 import Button from "@mui/material/Button";
-import ErrorAlert from "./ErrorAlert";
+import ErrorAlert from "../ErrorAlert";
 
 export let numberOfColors;
 

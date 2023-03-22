@@ -1,9 +1,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import ColorPicker from "./ColorPicker";
-import MoodButton from "./Buttons/MoodButton";
-import moods from "../mood-color-data.json";
-import NextButton from "./Buttons/NextButton";
+import ColorPicker from "../ColorPicker";
+import MoodButton from "../Buttons/MoodButton";
+import moods from "../../mood-color-data.json";
+import NextButton from "../Buttons/NextButton";
 
 
 export default function SecondPage() {

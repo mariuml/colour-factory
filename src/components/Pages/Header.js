@@ -1,5 +1,5 @@
 import React from "react";
-import { hexCode } from "./ColorPicker";
+import { hexCode } from "../ColorPicker";
 
 export default function Header () {
 
