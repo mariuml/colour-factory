@@ -23,8 +23,8 @@ function ColorPicker() {
   }
   
   const color = "hsl(" + hsva.h + ", " + hsva.s + "%, " + hsva.v +"%)"
-
-  userColor = color;
+  userColor = [];
+  userColor.push(hsva.h, hsva.s, hsva.v)
 
   return (
     <div>
