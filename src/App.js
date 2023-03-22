@@ -2,11 +2,10 @@ import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 // Components
-import Header from "./components/Header";
-import Home from "./components/Home";
-import ColorSelectionPage from "./components/ColorSelectionPage";
-import ResultPage from "./components/ResultPage";
-
+import Header from "./components/Pages/Header";
+import Home from "./components/Pages/Home";
+import ColorSelectionPage from "./components/Pages/ColorSelectionPage";
+import ResultPage from "./components/Pages/ResultPage";
 
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";

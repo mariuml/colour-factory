@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import $ from "jquery";
 import Button from "@mui/material/Button";
-import ErrorAlert from "./ErrorAlert";
+import ErrorAlert from "../ErrorAlert";
 
 
 export let numberOfColors;
@@ -48,8 +48,7 @@ export default function FirstPage() {
       </div>
       <div className="d-flex p-4">
         <Button
-          variant="text"
-          className="button m-auto px-5"
+          className="nextButton m-auto px-5"
           onClick={checkInput}
         >
           Next&#187;
