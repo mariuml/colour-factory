@@ -48,7 +48,6 @@ export default function FirstPage() {
       </div>
       <div className="d-flex pt-4">
         <Button
-          variant="text"
           className="button m-auto px-5"
           onClick={checkInput}
         >
