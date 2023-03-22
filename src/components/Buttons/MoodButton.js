@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Tooltip } from "@mui/material/";
 // import { startingColour } from "./GetColour";
-export let colourSelection = "";
+export let colourSelection;
 
 function MoodButton(props) {
   // Event handler
@@ -16,9 +16,6 @@ function MoodButton(props) {
     target.classList.add("active")
   };
 
-  const check = event => {
-
-  }
 
   // Returning mood buttons
   let textColor = "#FFFFFF";

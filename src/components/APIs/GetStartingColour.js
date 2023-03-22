@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from "jquery";
-import { colourSelection } from "../Buttons/MoodButton";
+import { userChosenColour } from "../Pages/ColorSelectionPage";
 
 // Global variables
 var mode = "analogic";
@@ -8,11 +8,10 @@ var mode = "analogic";
 
 function GetStartingColour() {
     var queryURL =
-    "https://www.thecolorapi.com/id?hex=" +
-   colourSelection +
+    "https://www.thecolorapi.com/id?" +
+    userChosenColour +
     "&mode=" +
     mode;
-
   $.ajax({
     url: queryURL,
     method: "GET",

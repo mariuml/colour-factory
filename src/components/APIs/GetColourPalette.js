@@ -1,7 +1,6 @@
 import $ from "jquery";
-import { colourSelection } from "../Buttons/MoodButton";
-import { userColor } from "../ColorPicker";
 import { numberOfColors } from "../Pages/Home";
+import { userChosenColour } from "../Pages/ColorSelectionPage";
 
 // Global variables
 let mode = "analogic";
@@ -9,21 +8,19 @@ let mode = "analogic";
 
 // Function to get an API response from the Colours API
 function GetColour() {
-  console.log(userColor)
   let queryURL =
-    "https://www.thecolorapi.com/scheme?hex=" +
-    colourSelection +
-    "$hsl=" +
-    userColor[0] + "," + userColor[1] + "%," + userColor[2] + "%" +
+    "https://www.thecolorapi.com/scheme?" +
+    userChosenColour +
     "&mode=" +
     mode +
     "&count=" +
     numberOfColors;
-    console.log(queryURL)
+    console.log(queryURL);
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (response) {
+    console.log(response)
     $("#paletteDisplay").attr("src", response.image.named);
   });
 
