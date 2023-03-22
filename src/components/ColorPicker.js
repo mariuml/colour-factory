@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Wheel from '@uiw/react-color-wheel';
-
 import $ from 'jquery'
+
+// CSS
+import '../style.css'
 
 
 // needs to be removed
@@ -11,9 +13,8 @@ export let userColor = "";
 
 function ColorPicker() {
 
-  const [hsva, setHsva] = useState({ h: 0, s: 0, v: 80, a: 1 });
+  const [hsva, setHsva] = useState({ h: 0, s: 0, v: 90, a: 1 });
   
-
   function adjustBrightness(event) {
     const brightness = $("#brightness").val()
     const newValue = hsva
@@ -21,7 +22,7 @@ function ColorPicker() {
     setHsva({...hsva, newValue})
   }
   
-  let color = "hsl(" + hsva.h + ", " + hsva.s + "%, " + hsva.v +"%)"
+  const color = "hsl(" + hsva.h + ", " + hsva.s + "%, " + hsva.v +"%)"
 
   userColor = color;
 
@@ -37,7 +38,7 @@ function ColorPicker() {
         }}
       />
       <label className="d-block">Brightness</label>
-      <input onChange={adjustBrightness} id="brightness" type="range"  min="0" max="100"/>
+      <input onChange={adjustBrightness} id="brightness" type="range" min="0" max="100" value={hsva.v}/>
       <div className="d-flex align-items-center justify-content-center mt-3" style={{width: "100%", height: 100, backgroundColor: color, borderRadius: 10}}>
         <h3 id="colorText"> {color} </h3>
       </div>
