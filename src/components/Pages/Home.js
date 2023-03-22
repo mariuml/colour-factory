@@ -46,7 +46,7 @@ export default function FirstPage() {
           <ErrorAlert message="Looks like you forgot to specify the number of colours for your palette." />
         )}
       </div>
-      <div className="d-flex pt-4">
+      <div className="d-flex p-4">
         <Button
           className="nextButton m-auto px-5"
           onClick={checkInput}

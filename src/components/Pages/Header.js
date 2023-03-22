@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { hexCode } from "./ColorPicker";
-import Modal from "react-bootstrap/Modal";
+import { hexCode } from "../ColorPicker";
+import { Modal } from "react-bootstrap";
 
 export default function Header() {
   const [show, setShow] = useState(false);
