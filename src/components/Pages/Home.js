@@ -22,7 +22,6 @@ export default function FirstPage() {
 
     // Checks if input value is a valid number
     if (isNaN(colorNum) || colorNum > 9 || colorNum < 0 || colorNum === "") {
-      // alert("Please input valid number! or something like that")
       togglePopUp();
       return navigate("/");
     } else {
