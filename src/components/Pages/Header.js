@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { hexCode } from "../ColorPicker";
 import { Modal } from "react-bootstrap";
+import Button from "@mui/material/Button";
 
 export default function Header() {
   const [show, setShow] = useState(false);
@@ -32,6 +33,14 @@ export default function Header() {
           <h3>Something saved with button</h3>
           <h3>Something saved with button</h3>
         </Modal.Body>
+        <Modal.Footer>
+          <Button 
+          className=""
+          onClick={() => {localStorage.clear()}}
+          >
+            Clear all saves
+          </Button>
+        </Modal.Footer>
       </Modal>
     </header>
   );
