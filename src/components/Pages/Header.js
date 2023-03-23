@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import SavedList from "../SavedList";
 import { saved } from "../Buttons/SaveButton";
 
-import logo from "../../assets/images/art.png"
+import logo from "../../assets/images/art.png";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -25,21 +25,27 @@ export default function Header() {
         backgroundColor: "#59c09a",
       }}
     >
-      <div style={{display:"inline-flex"}}>
-      <img src={logo} alt="Colour Factory Logo" width={45} height={45} style={{marginRight:15}}/>
+      <div style={{ display: "inline-flex" }}>
+        <img
+          src={logo}
+          alt="Colour Factory Logo"
+          width={45}
+          height={45}
+          style={{ marginRight: 15 }}
+        />
         <h1>Welcome to Colour Factory!</h1>
       </div>
 
-      <div className="col-3">
+      <div className="col-3" style={{ maxWidth: 200 }}>
         <Button
-          sx={{ width: 200 }}
+          sx={{ width: "100%" }}
           onClick={() => navigate("/")}
           variant="contained"
         >
           Home
         </Button>{" "}
         <br /> <br />
-        <Button sx={{ width: 200 }} onClick={handleShow} variant="contained">
+        <Button sx={{ width: "100%" }} onClick={handleShow} variant="contained">
           Saved Palettes
         </Button>
       </div>
