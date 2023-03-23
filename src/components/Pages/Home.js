@@ -7,6 +7,11 @@ import ErrorAlert from "../ErrorAlert";
 
 export let numberOfColors;
 
+export function showUpNumber(element) {
+  numberOfColors = element
+ }
+
+
 export default function FirstPage() {
   const navigate = useNavigate();
 

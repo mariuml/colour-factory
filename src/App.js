@@ -18,8 +18,8 @@ function App() {
       <div className="bg bg2"></div>
       <div className="bg bg3"></div>
       <div className="content">
-        <Header />
         <BrowserRouter>
+          <Header />
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="ColorSelectionPage" element={<ColorSelectionPage />} />
