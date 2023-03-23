@@ -25,6 +25,7 @@ export default function Header() {
         backgroundColor: "#59c09a",
       }}
     >
+      {/* Greeting and Logo */}
       <div style={{ display: "inline-flex" }}>
         <img
           src={logo}
@@ -36,6 +37,7 @@ export default function Header() {
         <h1>Welcome to Colour Factory!</h1>
       </div>
 
+      {/* Buttons to Home and Saved Palettes */}
       <div className="col-3" style={{ maxWidth: 200 }}>
         <Button
           sx={{ width: "100%" }}
@@ -49,10 +51,15 @@ export default function Header() {
           Saved Palettes
         </Button>
       </div>
+
+      {/* Modal Container for saved palettes */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="m-auto">
-            Your saved color palettes
+          <Modal.Title
+            className="m-auto"
+            style={{ textDecoration: "underline" }}
+          >
+            Your Saved Colour Palettes
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="container">
