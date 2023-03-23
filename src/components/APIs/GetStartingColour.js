@@ -9,7 +9,7 @@ var mode = "analogic";
 
 
 function GetStartingColour() {
-    var queryURL =
+  var queryURL =
     "https://www.thecolorapi.com/id?" +
     userChosenColour +
     "&mode=" +
@@ -19,13 +19,19 @@ function GetStartingColour() {
     method: "GET",
   }).then(function (response) {
     mainColour = response.name.value;
-    $("#startingColourDisplay").attr("src", response.image.named);
+    // renders color block for user selected color
+    const div = $("<div>");
+    const h5 = $("<h5>");
+    const p = $("<p>")
+    $("#starting-colour").append(div.css("background-color", response.hex.value).css("width", "200").css("height", "70").css("border", "1px solid black").css("text-shadow", "-1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white").attr("class", "m-auto"))
+    div.append(h5.text(response.name.value).attr("class", "text-center"));
+    div.append(p.text(response.hex.value))
   });
 
   return (
     <div>
-      <h1> Here is your chosen starting colour</h1>
-      <img alt="starting colour display" src="" id="startingColourDisplay"></img>
+      <h2> Here is your chosen starting colour</h2>
+      <div id="starting-colour" className="m-auto"></div>
     </div>
   )
 }

@@ -20,13 +20,22 @@ function GetColour() {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    $("#paletteDisplay").attr("src", response.image.named);
+    // renders color blocks from response
+    response.colors.forEach(e => {
+    const div = $("<div>");
+    const h5 = $("<h5>");
+    const p = $("<p>")
+    $("#colours-container").append(div.css("background-color", e.hex.value).css("width", "200").css("height", "70").css("border", "1px solid black").css("text-shadow", "-1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white").attr("class", "m-auto"))
+    div.append(h5.text(e.name.value).attr("class", "text-center"))
+    div.append(p.text(e.hex.value))
+    })
+
   });
 
   return (
     <div>
-      <h1> Here is your colour palette!</h1>
-      <img alt="pallete display" src="" id="paletteDisplay"></img>
+      <h2> Here is your colour palette!</h2>
+      <div id="colours-container" className="m-auto"></div>
     </div>
   );
 }
