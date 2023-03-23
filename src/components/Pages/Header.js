@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import SavedList from "../SavedList";
 import { saved } from "../Buttons/SaveButton";
 
-import Logo from "../Logo";
+import logo from "../../assets/images/art.png"
 
 export default function Header() {
   const navigate = useNavigate();
@@ -25,10 +25,11 @@ export default function Header() {
         backgroundColor: "#59c09a",
       }}
     >
-      <div>
-        <Logo />
+      <div style={{display:"inline-flex"}}>
+      <img src={logo} alt="Colour Factory Logo" width={45} height={45} style={{marginRight:15}}/>
         <h1>Welcome to Colour Factory!</h1>
       </div>
+
       <div className="col-3">
         <Button
           sx={{ width: 200 }}
