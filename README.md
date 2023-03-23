@@ -16,7 +16,7 @@ This app allows users to generate a colour palette with up to nine colours. It i
 
 ### Demo
 
-*Add Gif*
+<img src="./src/assets/videos/demo.gif" alt="Application Demo" width="500">
 
 ## Credits
 
