@@ -3,13 +3,12 @@ import Button from "@mui/material/Button";
 import { Modal } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-import SavedList from '../SavedList'
-import { saved } from '../Buttons/SaveButton'
+import SavedList from "../SavedList";
+import { saved } from "../Buttons/SaveButton";
 
-
+import Logo from "../Logo";
 
 export default function Header() {
-
   const navigate = useNavigate();
 
   // Modal functionality
@@ -26,10 +25,22 @@ export default function Header() {
         backgroundColor: "#59c09a",
       }}
     >
-      <h1>Welcome to Colour Factory!</h1>
+      <div>
+        <Logo />
+        <h1>Welcome to Colour Factory!</h1>
+      </div>
       <div className="col-3">
-        <Button sx={{width: 200}} onClick={() => navigate("/")} variant="contained">Home</Button> <br/> <br/>
-        <Button sx={{width: 200}} onClick={handleShow} variant="contained">Saved Palettes</Button>
+        <Button
+          sx={{ width: 200 }}
+          onClick={() => navigate("/")}
+          variant="contained"
+        >
+          Home
+        </Button>{" "}
+        <br /> <br />
+        <Button sx={{ width: 200 }} onClick={handleShow} variant="contained">
+          Saved Palettes
+        </Button>
       </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
@@ -48,16 +59,23 @@ export default function Header() {
               </tr>
             </thead>
             <tbody id="tableBody">
-              {saved.map(e => <SavedList key={e[0]} name={e[0]} colour={e[1]} num={e[2]} time={e[3]} />)}
+              {saved.map((e) => (
+                <SavedList
+                  key={e[0]}
+                  name={e[0]}
+                  colour={e[1]}
+                  num={e[2]}
+                  time={e[3]}
+                />
+              ))}
             </tbody>
           </table>
-
         </Modal.Body>
         <Modal.Footer>
           <Button
             className=""
             onClick={() => {
-              localStorage.clear()
+              localStorage.clear();
             }}
             href="/"
           >
