@@ -36,18 +36,20 @@ export default function FirstPage() {
 
   return (
     <div>
-      
+      {/* Description of how the app works */}
       <div id="howTo" className="text-center p-5">
         <h2>How It Works</h2>
         <p>
-          1. Select the number of colours you would like in the palette. You can
-          choose up to nine. Click Next.<br />
+          1. Select the number of colours for the palette. Click Next.
+          <br />
           2. Select a colour from the mood buttons or the colour picker. Click
-          Next.<br />
-          3. Results are rendered and you have an option to save the palette.
+          Next.
+          <br />
+          3. View results and save the palette.
         </p>
       </div>
       <div className="container-fluid">
+        {/* Input for number of palette colours */}
         <h3 className="text-center p-2">
           How many colours would you like in your palette?
         </h3>
@@ -62,6 +64,8 @@ export default function FirstPage() {
           />
         )}
       </div>
+
+      {/* Next button */}
       <div className="d-flex p-4">
         <Button className="nextButton m-auto px-5" onClick={checkInput}>
           Next&#187;
