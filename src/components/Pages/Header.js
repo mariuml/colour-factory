@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-
 import { Modal } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 import SavedList from '../SavedList'
-
 import { saved } from '../Buttons/SaveButton'
 
+
+
 export default function Header() {
+
+  const navigate = useNavigate();
 
   // Modal functionality
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
-
 
   return (
     <header
@@ -26,7 +27,7 @@ export default function Header() {
       }}
     >
       <h1>Welcome to Colour Factory!</h1>
-      <Button href="/" variant="contained">Home</Button>
+      <Button onClick={() => navigate("/")} variant="contained">Home</Button>
       <Button onClick={handleShow} variant="contained">Saved Palettes
       </Button>
       <Modal show={show} onHide={handleClose}>
