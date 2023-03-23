@@ -13,6 +13,7 @@ import { userColour } from '../ColorPicker'
 export let userChosenColour;
 
 
+
 export default function SecondPage() {
   // Rendering buttons to the page
   const navigate = useNavigate();

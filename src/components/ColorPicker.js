@@ -6,9 +6,6 @@ import $ from 'jquery'
 import '../style.css'
 
 
-// needs to be removed
-export let hexCode = "#59c09a";
-
 export let userColour;
 
 function ColorPicker() {

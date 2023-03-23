@@ -1,15 +1,20 @@
 import React, { useState } from "react";
-import { hexCode } from "../ColorPicker";
-import { Modal } from "react-bootstrap";
 import Button from "@mui/material/Button";
 
-export default function Header() {
-  const [show, setShow] = useState(false);
+import { Modal } from "react-bootstrap";
 
+import SavedList from '../SavedList'
+
+import { saved } from '../Buttons/SaveButton'
+
+export default function Header() {
+
+  // Modal functionality
+  const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-//   const navigate = useNavigate()
+
 
   return (
     <header
@@ -17,7 +22,7 @@ export default function Header() {
       style={{
         width: "100%",
         height: 150,
-        backgroundColor: hexCode,
+        backgroundColor: "#59c09a",
       }}
     >
       <h1>Welcome to Colour Factory!</h1>
@@ -30,15 +35,29 @@ export default function Header() {
             Your saved color palettes
           </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <h3>Something saved with button</h3>
-          <h3>Something saved with button</h3>
-          <h3>Something saved with button</h3>
+        <Modal.Body className="container">
+          <table className="table">
+            <thead>
+              <tr>
+                <th scope="col">Seed Colour</th>
+                <th scope="col">Number of Colours</th>
+                <th scope="col">Time</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+              {saved.map(e => <SavedList key={e[0]} name={e[0]} colour={e[1]} num={e[2]} time={e[3]} />)}
+            </tbody>
+          </table>
+
         </Modal.Body>
         <Modal.Footer>
           <Button 
           className=""
-          onClick={() => {localStorage.clear()}}
+          onClick={() => {
+            localStorage.clear()
+          }}
+          href="/"
           >
             Clear all saves
           </Button>

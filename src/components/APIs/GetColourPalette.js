@@ -1,4 +1,5 @@
 import $ from "jquery";
+
 import { numberOfColors } from "../Pages/Home";
 import { userChosenColour } from "../Pages/ColorSelectionPage";
 
@@ -15,12 +16,10 @@ function GetColour() {
     mode +
     "&count=" +
     numberOfColors;
-    console.log(queryURL);
   $.ajax({
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response)
     $("#paletteDisplay").attr("src", response.image.named);
   });
 
