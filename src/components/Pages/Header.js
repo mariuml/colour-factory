@@ -31,8 +31,8 @@ export default function Header() {
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="m-auto">
-            Your saved color palettes
+          <Modal.Title className="m-auto" style={{textDecorationLine:"underline"}}>
+            Your Saved Colour Palettes
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="container">

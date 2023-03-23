@@ -55,10 +55,6 @@ export default function SecondPage() {
         <ColorPicker />
       </div>
 
-      <div>
-        <p>Selected Colour:</p>
-      </div>
-
       <div className="d-flex p-4">
         <Button
           onClick={checkResult}
