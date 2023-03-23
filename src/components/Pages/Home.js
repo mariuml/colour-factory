@@ -7,9 +7,8 @@ import ErrorAlert from "../ErrorAlert";
 export let numberOfColors;
 
 export function showUpNumber(element) {
-  numberOfColors = element
- }
-
+  numberOfColors = element;
+}
 
 export default function FirstPage() {
   const navigate = useNavigate();
@@ -37,27 +36,36 @@ export default function FirstPage() {
 
   return (
     <div>
+      {/* Description of how the app works */}
       <div id="howTo" className="text-center p-5">
         <h2>How It Works</h2>
         <p>
-          1. Select the number of colours you would like in the palette. You can
-          choose up to nine. Click Next.<br></br>
+          1. Select the number of colours for the palette. Click Next.
+          <br />
           2. Select a colour from the mood buttons or the colour picker. Click
-          Next.<br></br>
-          3. Results are rendered and you have an option to save the palette.
+          Next.
+          <br />
+          3. View results and save the palette.
         </p>
       </div>
       <div className="container-fluid">
+        {/* Input for number of palette colours */}
         <h3 className="text-center p-2">
           How many colours would you like in your palette?
         </h3>
         <input id="colorNum" className="d-flex m-auto"></input>
 
         {/* If errorAlertPopUp is true, alert will pop up */}
+        {/* toggle attribute adds functionality to 'X' */}
         {errorAlertPopUp && (
-          <ErrorAlert message="Looks like you forgot to specify the number of colours for your palette." />
+          <ErrorAlert
+            toggle={togglePopUp}
+            message="Looks like you forgot to specify the number of colours for your palette."
+          />
         )}
       </div>
+
+      {/* Next button */}
       <div className="d-flex p-4">
         <Button className="nextButton m-auto px-5" onClick={checkInput}>
           Next&#187;

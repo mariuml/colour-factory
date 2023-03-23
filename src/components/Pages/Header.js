@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import SavedList from "../SavedList";
 import { saved } from "../Buttons/SaveButton";
 
-import Logo from "../Logo";
+import logo from "../../assets/images/art.png";
 
 export default function Header() {
   const navigate = useNavigate();
@@ -25,27 +25,41 @@ export default function Header() {
         backgroundColor: "#59c09a",
       }}
     >
-      <div>
-        <Logo />
+      {/* Greeting and Logo */}
+      <div style={{ display: "inline-flex" }}>
+        <img
+          src={logo}
+          alt="Colour Factory Logo"
+          width={45}
+          height={45}
+          style={{ marginRight: 15 }}
+        />
         <h1>Welcome to Colour Factory!</h1>
       </div>
-      <div className="col-3">
+
+      {/* Buttons to Home and Saved Palettes */}
+      <div className="col-3" style={{ maxWidth: 200 }}>
         <Button
-          sx={{ width: 200 }}
+          sx={{ width: "100%" }}
           onClick={() => navigate("/")}
           variant="contained"
         >
           Home
         </Button>{" "}
         <br /> <br />
-        <Button sx={{ width: 200 }} onClick={handleShow} variant="contained">
+        <Button sx={{ width: "100%" }} onClick={handleShow} variant="contained">
           Saved Palettes
         </Button>
       </div>
+
+      {/* Modal Container for saved palettes */}
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="m-auto">
-            Your saved color palettes
+          <Modal.Title
+            className="m-auto"
+            style={{ textDecoration: "underline" }}
+          >
+            Your Saved Colour Palettes
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="container">

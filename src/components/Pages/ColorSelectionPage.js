@@ -6,13 +6,13 @@ import moods from "../../mood-color-data.json";
 import Button from "@mui/material/Button";
 
 // Importing color picker and mood button value;
-import { colourSelection } from '../Buttons/MoodButton'
-import { userColour } from '../ColorPicker'
+import { colourSelection } from "../Buttons/MoodButton";
+import { userColour } from "../ColorPicker";
 
-export let userChosenColour
+export let userChosenColour;
 
 export function showUp(element) {
- userChosenColour = element
+  userChosenColour = element;
 }
 
 export default function SecondPage() {
@@ -20,22 +20,27 @@ export default function SecondPage() {
   const navigate = useNavigate();
 
   function checkResult() {
-
-    let isItMoodButton = false
+    let isItMoodButton = false;
     const variable = document.querySelectorAll(".mood-btn");
-  
-    variable.forEach(e => {
-      if (e.classList.contains('active')) {
+
+    variable.forEach((e) => {
+      if (e.classList.contains("active")) {
         isItMoodButton = true;
-      };
+      }
 
       if (isItMoodButton) {
         userChosenColour = "hex=" + colourSelection;
       } else {
-        userChosenColour = "hsl=" + userColour[0] + "," + userColour[1] + "%," + userColour[2] + "%"
-      };
+        userChosenColour =
+          "hsl=" +
+          userColour[0] +
+          "," +
+          userColour[1] +
+          "%," +
+          userColour[2] +
+          "%";
+      }
     });
-
 
     return navigate("/ResultPage");
   }
@@ -56,10 +61,7 @@ export default function SecondPage() {
       </div>
 
       <div className="d-flex p-4">
-        <Button
-          onClick={checkResult}
-          className="nextButton m-auto px-5"
-        >
+        <Button onClick={checkResult} className="nextButton m-auto px-5">
           Next&#187;
         </Button>
       </div>
