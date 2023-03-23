@@ -2,6 +2,8 @@ import React from 'react';
 import $ from "jquery";
 import { userChosenColour } from "../Pages/ColorSelectionPage";
 
+export let mainColour;
+
 // Global variables
 var mode = "analogic";
 
@@ -16,7 +18,7 @@ function GetStartingColour() {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
+    mainColour = response.name.value;
     $("#startingColourDisplay").attr("src", response.image.named);
   });
 
