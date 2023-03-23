@@ -27,13 +27,14 @@ export default function Header() {
       }}
     >
       <h1>Welcome to Colour Factory!</h1>
-      <Button onClick={() => navigate("/")} variant="contained">Home</Button>
-      <Button onClick={handleShow} variant="contained">Saved Palettes
-      </Button>
+      <div className="col-3">
+        <Button sx={{width: 200}} onClick={() => navigate("/")} variant="contained">Home</Button> <br/> <br/>
+        <Button sx={{width: 200}} onClick={handleShow} variant="contained">Saved Palettes</Button>
+      </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title className="m-auto" style={{textDecorationLine:"underline"}}>
-            Your Saved Colour Palettes
+          <Modal.Title className="m-auto">
+            Your saved color palettes
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="container">
