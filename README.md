@@ -35,7 +35,7 @@ This app allows users to generate a colour palette with up to nine colours. It i
 
 ### Images
 
-- Logo - []("https://www.flaticon.com/free-icons/paintbrush")
+- Logo - [FlatIcon]("https://www.flaticon.com/free-icons/paintbrush")
 
 ## Licence
 

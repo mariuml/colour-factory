@@ -9,7 +9,7 @@ import ResultPage from "./components/Pages/ResultPage";
 
 // CSS
 import "bootstrap/dist/css/bootstrap.min.css";
-import './style.css';
+import "./style.css";
 
 function App() {
   return (
@@ -23,10 +23,7 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="ColorSelectionPage" element={<ColorSelectionPage />} />
-            <Route
-              path="ResultPage"
-              element={<ResultPage />}
-            />
+            <Route path="ResultPage" element={<ResultPage />} />
           </Routes>
         </BrowserRouter>
       </div>
