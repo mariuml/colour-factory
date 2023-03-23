@@ -26,7 +26,7 @@ export default function Header() {
       }}
     >
       <h1>Welcome to Colour Factory!</h1>
-<Button href="/" variant="contained">Home</Button>
+      <Button href="/" variant="contained">Home</Button>
       <Button onClick={handleShow} variant="contained">Saved Palettes
       </Button>
       <Modal show={show} onHide={handleClose}>
@@ -38,10 +38,10 @@ export default function Header() {
         <Modal.Body className="container">
           <table className="table">
             <thead>
-              <tr>
+              <tr className="text-center">
                 <th scope="col">Seed Colour</th>
                 <th scope="col">Number of Colours</th>
-                <th scope="col">Time</th>
+                <th scope="col">Date</th>
                 <th scope="col"></th>
               </tr>
             </thead>
@@ -52,12 +52,12 @@ export default function Header() {
 
         </Modal.Body>
         <Modal.Footer>
-          <Button 
-          className=""
-          onClick={() => {
-            localStorage.clear()
-          }}
-          href="/"
+          <Button
+            className=""
+            onClick={() => {
+              localStorage.clear()
+            }}
+            href="/"
           >
             Clear all saves
           </Button>
