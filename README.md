@@ -1,4 +1,4 @@
-# The Colour Factory
+# <img src="https://cdn-icons-png.flaticon.com/512/5311/5311143.png" width="35" height="35"> The Colour Factory
 
 ## Description
 
@@ -33,8 +33,18 @@ This app allows users to generate a colour palette with up to nine colours. It i
 - [Bootstrap](https://getbootstrap.com)
 - [React Bootstrap](https://react-bootstrap.github.io)
 
+### Images
+
+- Logo - []("https://www.flaticon.com/free-icons/paintbrush")
+
 ## Licence
 
 [MIT License](./LICENSE)
 
 ## Future Feature Development
+
+- Display colours on saved palette
+- Display individual colours in results
+- Display Hex code of the selected colour
+- Add inspirational photos based on starting colour
+- User feedback form
