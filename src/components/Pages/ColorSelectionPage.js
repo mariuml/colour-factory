@@ -9,10 +9,11 @@ import Button from "@mui/material/Button";
 import { colourSelection } from '../Buttons/MoodButton'
 import { userColour } from '../ColorPicker'
 
+export let userChosenColour
 
-export let userChosenColour;
-
-
+export function showUp(element) {
+ userChosenColour = element
+}
 
 export default function SecondPage() {
   // Rendering buttons to the page
